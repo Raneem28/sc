@@ -1,38 +1,559 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+}
+body {
+  overflow-x: hidden;
+}
+/*For nav bar container*/
+.NavBar {
+  width: 100%;
+  padding-bottom: 5px;
+  background-color: rgb(217, 217, 217);
+  
+}
+/*li items of navbar*/
+.NavBar li {
+  list-style: none;
+  display: inline-block;
+}
+/*to make the title of software company pink*/
+.Software {
+  padding-left: 50px;
+  padding-right: 600px;
+  font-size: large;
+  font-weight: bold;
+  color: rgb(229, 19, 89);
+}
+/*Home, services,pages,contact,started are all nav bar content*/
+.Home {
+  padding-right: 50px;
+  color: rgb(229, 19, 89);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Services,
+.Pages,
+.Contact {
+  padding-right: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.Started {
+  padding-right: 50px;
+  background-color: rgb(229, 19, 89);
   color: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+/*get started heading wrapped in pink box*/
+.Started2 {
+  display: inline-block;
+  background-color: rgb(229, 19, 89);
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+/*present in welcome.js file,wrapping the content of welcome */
+.Container {
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.content {
+  flex: 1;
+  max-width: 50%;
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.w {
+  font-size: 2rem;
+  color: #323232;
+  padding-bottom: 15px;
+}
+
+.w span {
+  color: rgb(229, 19, 89);
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  color: #323232;
+  padding-bottom: 15px;
+}
+
+.inside {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  color: rgb(50, 50, 50);
+  padding-bottom: 15px;
+}
+
+.Started2 {
+  display: inline-block;
+  background-color: rgb(229, 19, 89);
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.images {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.images .image {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/*it is included in boxes.js file and wraps all the images included*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+  padding-left: 200px;
+}
+/*has the ul of aboutus.js file*/
+.pcee {
+  list-style: none;
+}
+/*contains the list items of aboutus.js*/
+.PCEE {
+  padding-top: 15px;
+  font-weight: 500;
+  color: rgb(50, 50, 50);
+}
+/*contains the list items of aboutus.js*/
+.Numbers {
+  color: rgb(229, 19, 89);
+  font-size: xx-large;
+  font-weight: bolder;
+}
+/*Wraps whole about us content*/
+.content2 {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 100px;
+  padding-left: 250px;
+  gap: 50px;
+}
+/*include about content without images*/
+.text-section {
+  flex: 1;
+  max-width: 60%;
+}
+
+.text-section h1 {
+  font-weight: 650;
+  font-size: 70px;
+  margin-bottom: 15px;
+}
+
+.text-section .inside {
+  font-weight: lighter;
+  color: rgb(50, 50, 50);
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+.learn {
+  color: rgb(229, 19, 89);
+  margin-bottom: 15px;
+}
+
+.pcee {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pcee li {
+  display: inline-block;
+  margin-right: 20px;
+  font-weight: 500;
+  color: rgb(50, 50, 50);
+}
+
+.Numbers {
+  color: rgb(229, 19, 89);
+  font-size: xx-large;
+  font-weight: bolder;
+} /*all of this and above are included in aboutus.js*/
+
+/*images2 in about us*/
+.images2 {
+  flex: 1;
+  max-width: 40%;
+}
+
+.images2 img {
+  max-width: 100%;
+  height: auto;
+}
+/*in our team.js*/
+.images3 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  padding-left: 75px;
+}
+/*wraps the heading of ourteam.js*/
+.intro {
+  display: flex;
+  justify-content: center;
+}
+/*names under our team pictures*/
+.name {
+  font-weight: 600;
+}
+/*img wraps photos included in portfolio.js*/
+.img {
+  display: grid;
+  grid-template-columns: repeat(2, 0.5fr);
+  grid-template-rows: repeat(3, auto);
+  padding-left: 75px;
+  grid-gap: 15px;
+}
+/*wraps the content of portfolio portal*/
+.content3 {
+  display: block;
+  box-sizing: border-box;
+  font-size: large;
+  height: 350px;
+  width: 75pc;
+  padding-top: 100px;
+  padding-left: 75px;
+}
+/*to lighten the color of particular content*/
+.light {
+  color: rgb(113, 112, 112);
+}
+/*wraps whole portfolio content*/
+.port {
+  padding-bottom: 50px;
+}
+/*pictures included in testimonial.js*/
+.pictures {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-bottom: 25px;
+}
+/*wraps whole content of testimonial.js*/
+.content4 {
+  display: block;
+  font-size: 1.5rem;
+  height: fit-content;
+  box-sizing: border-box;
+  width: 80pc;
+  padding-top: 100px;
+  padding-left: 75px;
+  color: rgb(50, 50, 50);
+}
+.content4 h1 {
+  color: black;
+  width: 100pc;
+  font-size: 70px;
+}
+/*to set the background color of testimonial.js*/
+.color {
+  height: fit-content;
+  background-color: #fff4f4;
+}
+/*para of test...*/
+.bd {
+  padding-bottom: 30px;
+}
+/*contains premium, standard and basic designs*/
+.Pricing {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-left: 100px;
+  font-size: 1.5rem;
+  grid-gap: 15px;
+}
+/*contains list of premium, standard and basic designs*/
+
+.price .list li {
+  list-style: symbols(checklist);
+  padding-bottom: 15px;
+}
+/*buy now button in pricing tab*/
+.btn {
+  display: block;
+  background-color: rgb(52, 51, 51);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+.Standard {
+  display: block;
+  height: fit-content;
+  width: 300px;
+  background-color: rgb(220, 40, 113);
+  color: white;
+  padding: 25px;
+  border-radius: 10px;
+}
+.Basic {
+  display: block;
+  height: fit-content;
+  width: 300px;
+  background-color: rgb(249, 241, 227);
+  color: black;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0cqb;
+}
+.Premium {
+  display: block;
+  height: fit-content;
+  width: 300px;
+  background-color: rgb(249, 241, 227);
+  color: black;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0cqb;
+}
+/*Vcontent of pricing tab*/
+.content5 {
+  display: block;
+  padding-left: 90px;
+}
+
+/*wraps the whole pricing tab*/
+.gap {
+  padding-bottom: 100px;
+  height: fit-content;
+}
+/*the upper layer of images in finalimage.js file*/
+.first {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-left: 100px;
+}
+/*the lower layer of images in finalimage.js file*/
+
+.second {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr;
+  padding-left: 100px;
+}
+/*wraps the whole the whole finalimages.js*/
+.container1 {
+  padding-bottom: 80px;
+}
+/*wraps the whole content of subscribe.js*/
+.box {
+  height: 300px;
+  background-color: rgb(251, 52, 132);
+  color: white;
+  position: relative;
+}
+/*the whole content of box.js*/
+.box-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.box-content h1 {
+  padding-bottom: 10px;
+  width: 68%;
+  margin: auto;
+}
+/*to include email in subscription box*/
+.input-box {
+  border-radius: 5px;
+  height: 50px;
+  width: 500px;
+  width: calc(102% - 0px);
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+}
+.box-content p {
+  font-size: 1rem;
+  display: block;
+  width: 70%;
+  margin: auto;
+  padding-bottom: 15px;
+}
+.email {
+  width: 80%;
+  margin: auto;
+  position: relative;
+}
+/*subscription button*/
+.sub {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 40px;
+  background-color: rgb(251, 52, 132);
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  padding: 0 20px;
+  cursor: pointer;
+}
+/*wraps sc,support,services,contact*/
+.end {
+  background-color: rgb(41, 41, 41);
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0px;
+  padding: 60px;
+  padding-left: 150px;
+}
+li {
+  list-style: none;
+  padding: 3px;
+}
+
+.sc img {
+  padding: 5px;
+}
+.sc h3 {
+  color: rgb(229, 19, 89);
+}
+/*the ending line in end.js*/
+.custom-hr {
+  border: none; 
+  height: 2px;
+  background-color: grey; 
+  margin-top: 20px;
+  width: 800px; 
+  margin: 20px auto;
+}
+/*wraps the whole content of end.js*/
+.wow {
+  background-color: rgb(41, 41, 41);
+  padding-bottom: 100px;
+}
+.wow p {
+  color: grey;
+  width: 20%;
+  margin: auto;
+}
+.sc p {
+  color: white;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+}
+
+
+
+
+@media (max-width: 1376px){
+  body{
+    overflow-x: hidden;
   }
-  to {
-    transform: rotate(360deg);
-  }
+/*to make the title of software company pink*/
+.Software {
+  padding-left: 50px;
+  padding-right: 300px;
+  font-size: large;
+  font-weight: bold;
+  color: rgb(229, 19, 89);
+}
+/*Home, services,pages,contact,started are all nav bar content*/
+.Home {
+  padding-right: 40px;
+  color: rgb(229, 19, 89);
+}
+
+.Services,
+.Pages,
+.Contact {
+  padding-right: 40px;
+}
+
+.Started {
+  padding-right: 50px;
+  background-color: rgb(229, 19, 89);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+/*images of welcome.js*/
+.images {
+  display: flex;
+  justify-content: right;
+  height: 300px;
+}
+.pictures {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Corrected syntax for repeating rows */
+  gap: 15px;
+  padding-bottom: 25px;
+  justify-items: center; /* Center items horizontally within their grid area */
+  align-items: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+  padding-left: 200px;
+  justify-items: center; /* Center items horizontally within their grid area */
+  align-items: center;
+}
+.images3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  padding-left: 75px;
+  justify-items: center; /* Center items horizontally within their grid area */
+  align-items: center;
+}
+.img {
+  display: grid;
+  grid-template-columns: repeat(1, 0.5fr);
+  grid-template-rows: repeat(3, auto);
+  padding-left: 75px;
+  grid-gap: 15px;
+  justify-items: center; /* Center items horizontally within their grid area */
+  align-items: center;
+}
+.Pricing {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding-left: 100px;
+  font-size: large;
+  grid-gap: 15px;
+  justify-items: center; /* Center items horizontally within their grid area */
+  align-items: center;
+}
+.first {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding-left: 100px;
+  justify-items: center; /* Center items horizontally within their grid area */
+  align-items: center;
+}
+/*the lower layer of images in finalimage.js file*/
+
+.second {
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  padding-left: 100px;
+  justify-items: center; /* Center items horizontally within their grid area */
+  align-items: center;
+}
 }
